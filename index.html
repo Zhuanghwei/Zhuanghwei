@@ -1,237 +1,156 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zurecíá • Mission Site (UN-style skeleton)</title>
-  <meta name="description" content="Official information portal for Zurecíá." />
-  <style>
-    /* ========= UN-style palette + base ========= */
-    :root{
-      --un-blue:#0069A3;         /* UN header/link blue */
-      --un-blue-light:#009EDB;   /* Accent blue */
-      --un-navy:#002E5B;         /* Dark navy headings */
-      --bg:#FFFFFF;              /* Content background */
-      --bg-alt:#F5F6F7;          /* Section light gray */
-      --text:#1F2A37;            /* Body text */
-      --muted:#6B7280;           /* Muted text */
-      --divider:#E5E7EB;         /* Hairline */
-      --focus:#0EA5E9;           /* Focus ring */
-      --tile:#E8F4FA;            /* Soft tile blue */
-      --tile2:#F3F7FB;           /* Alternate tile */
-      --radius:10px;
-      --shadow:0 6px 18px rgba(0,0,0,.06);
-      --maxw:1160px;
-    }
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;}
-    img{max-width:100%;display:block;}
-    a{color:var(--un-blue);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
-
-    /* ========= Header / Nav ========= */
-    .topbar{background:var(--bg);border-bottom:1px solid var(--divider)}
-    .brand{display:flex;align-items:center;gap:.9rem;padding:14px 0}
-    .brand-logo{
-      width:42px;height:42px;border-radius:50%;
-      background:conic-gradient(from 210deg at 50% 50%, var(--un-blue), var(--un-blue-light));
-      display:grid;place-items:center;color:#fff;font-weight:700;font-size:.8rem;letter-spacing:.06em;
-    }
-    .brand h1{font-size:1.05rem;margin:0;color:var(--un-navy);line-height:1.1}
-    .brand small{display:block;color:var(--muted);font-weight:500}
-
-    .nav{display:flex;gap:1.2rem;flex-wrap:wrap;padding:10px 0 16px}
-    .nav a{padding:10px 12px;border-radius:8px;font-weight:600;color:var(--un-navy)}
-    .nav a.active,.nav a:focus{background:var(--tile);outline:2px solid transparent}
-    .nav a:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:8px}
-
-    /* ========= Hero ========= */
-    .hero{background:linear-gradient(0deg, rgba(0,0,0,.0), rgba(0,0,0,.0)), url('https://images.unsplash.com/photo-1544989164-31dc3c645987?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat; color:#fff;}
-    .hero .overlay{background:linear-gradient(180deg, rgba(0,46,91,.85), rgba(0,46,91,.60)); padding:70px 0}
-    .hero h2{font-size:2.2rem;margin:0 0 .4rem}
-    .hero p{max-width:720px;margin:.4rem 0 1.2rem;color:#E8F1F7}
-    .cta{display:flex;gap:.8rem;flex-wrap:wrap}
-    .btn{display:inline-block;padding:12px 16px;border-radius:999px;font-weight:700;border:2px solid transparent;box-shadow:var(--shadow)}
-    .btn.primary{background:var(--un-blue);color:#fff}
-    .btn.secondary{background:#fff;color:var(--un-navy);border-color:#fff}
-
-    /* ========= Section headers ========= */
-    .section{padding:46px 0}
-    .section h3{color:var(--un-navy);font-size:1.4rem;margin:0 0 .6rem}
-    .section p.lead{color:var(--muted);margin:0 0 1.2rem}
-
-    /* ========= News grid ========= */
-    .news{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    .card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--divider)}
-    .card img{aspect-ratio:16/9;object-fit:cover}
-    .card .pad{padding:16px}
-    .card h4{margin:0 0 .3rem;color:var(--un-navy);font-size:1.05rem}
-    .meta{color:var(--muted);font-size:.9rem;margin-bottom:.5rem}
-
-    /* ========= Key figures band ========= */
-    .band{background:var(--bg-alt);border-top:1px solid var(--divider);border-bottom:1px solid var(--divider);padding:28px 0;margin:18px 0}
-    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-    .kpi{background:#fff;border-radius:12px;border:1px solid var(--divider);padding:16px 18px;box-shadow:var(--shadow)}
-    .kpi .n{font-size:1.4rem;font-weight:800;color:var(--un-blue)}
-    .kpi .l{color:var(--muted);font-weight:600}
-
-    /* ========= Focus tiles ========= */
-    .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .tile{background:var(--tile2);border:1px solid var(--divider);border-radius:12px;padding:18px 16px}
-    .tile h5{margin:.2rem 0;color:var(--un-navy)}
-    .tile p{margin:.15rem 0;color:var(--muted)}
-
-    /* ========= Footer ========= */
-    footer{background:var(--bg-alt);border-top:1px solid var(--divider);padding:34px 0;margin-top:40px}
-    .footgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:20px}
-    .footgrid h6{margin:.2rem 0 .6rem;color:var(--un-navy);font-size:.95rem}
-    .footgrid a{color:var(--un-blue);display:block;padding:.18rem 0}
-    .copyright{border-top:1px solid var(--divider);margin-top:16px;padding-top:12px;color:var(--muted);font-size:.9rem}
-
-    /* ========= Responsive ========= */
-    @media (max-width: 980px){
-      .news{grid-template-columns:1fr 1fr}
-      .kpis{grid-template-columns:1fr 1fr}
-      .tiles{grid-template-columns:1fr 1fr}
-      .footgrid{grid-template-columns:1fr 1fr}
-    }
-    @media (max-width: 640px){
-      .nav{overflow:auto}
-      .news,.tiles{grid-template-columns:1fr}
-      .kpis{grid-template-columns:1fr}
-      .hero h2{font-size:1.6rem}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zurecíá — Government and Nation Factbook</title>
+<style>
+  body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  header {
+    background-color: #0053a0; /* UN-style blue */
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  nav {
+    background-color: #0073c1;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  main {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+  }
+  main h2 {
+    color: #0053a0;
+    border-bottom: 2px solid #0053a0;
+    padding-bottom: 5px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 4px;
+  }
+  section {
+    margin-bottom: 30px;
+  }
+  footer {
+    background-color: #0053a0;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  ul {
+    padding-left: 20px;
+  }
+</style>
 </head>
 <body>
 
-  <!-- ======= Header / Nav ======= -->
-  <div class="topbar">
-    <div class="wrap">
-      <div class="brand" role="banner">
-        <div class="brand-logo" aria-hidden="true">ZR</div>
-        <div>
-          <h1>Zurecíá</h1>
-          <small>Permanent Mission • Public Information Portal</small>
-        </div>
-      </div>
-      <nav class="nav" aria-label="Primary">
-        <a href="#" class="active">Home</a>
-        <a href="#">About</a>
-        <a href="#">Government</a>
-        <a href="#">News</a>
-        <a href="#">Priorities</a>
-        <a href="#">Data</a>
-        <a href="#">Contact</a>
-      </nav>
-    </div>
-  </div>
+<header>
+  <h1>Zurecíá — Government and Nation Factbook</h1>
+</header>
 
-  <!-- ======= Hero ======= -->
-  <header class="hero">
-    <div class="overlay">
-      <div class="wrap">
-        <h2>Building peace, dignity and equality on a healthy Zurecíá</h2>
-        <p>
-          Official portal for information about Zurecíá’s people, priorities and actions.
-          Explore current initiatives, data dashboards, and the latest statements.
-        </p>
-        <div class="cta">
-          <a class="btn primary" href="#">Latest statements</a>
-          <a class="btn secondary" href="#">Country profile</a>
-        </div>
-      </div>
-    </div>
-  </header>
+<nav>
+  <a href="#executive">Executive Branch</a>
+  <a href="#legislature">Legislative Branch</a>
+  <a href="#judiciary">Judiciary</a>
+  <a href="#geography">Geography</a>
+  <a href="#economy">Economy</a>
+</nav>
 
-  <!-- ======= Key figures ======= -->
-  <section class="band">
-    <div class="wrap">
-      <div class="kpis" role="list">
-        <div class="kpi" role="listitem">
-          <div class="n">2.585B</div>
-          <div class="l">Population</div>
-        </div>
-        <div class="kpi" role="listitem">
-          <div class="n">₰125T</div>
-          <div class="l">GDP (Denari)</div>
-        </div>
-        <div class="kpi" role="listitem">
-          <div class="n">90.18</div>
-          <div class="l">HDI (very high)</div>
-        </div>
-        <div class="kpi" role="listitem">
-          <div class="n">.zr</div>
-          <div class="l">Top-level domain</div>
-        </div>
-      </div>
-    </div>
+<main>
+  <section id="executive">
+    <h2>Executive Branch</h2>
+    <img src="https://i.ibb.co/9khSM6dP/IMG-0018.png" alt="Executive Building">
+    <p><b>President:</b> Ranaús Shillé</p>
+    <p><b>Vice President:</b> Malan Kavoa</p>
+    <p>This is the residential and official office of the President, where political and ceremonial duties are conducted. The white façade represents power and dignity.</p>
   </section>
 
-  <!-- ======= News ======= -->
-  <section class="section">
-    <div class="wrap">
-      <h3>News and stories</h3>
-      <p class="lead">Updates from Zurecíá’s institutions, partners and communities.</p>
+  <section id="legislature">
+    <h2>Legislative Branch — Parliament (“The House”)</h2>
+    <img src="https://i.ibb.co/RkXdTwnQ/IMG-0017.png" alt="Legislative Building">
+    <p><b>House Speaker:</b> John Paige</p>
+    <p><b>Upper House:</b> Senate</p>
+    <p><b>Lower House:</b> House of the People</p>
+    <p>The bicameral system ensures balanced discussion and representation. The Senate refines legislation, while the House of the People votes on provincial representation.</p>
 
-      <div class="news">
-        <article class="card">
-          <img alt="" src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1200&auto=format&fit=crop" />
-          <div class="pad">
-            <div class="meta">Press release • 08:42</div>
-            <h4>President Shillé issues directive after security breach in the House of the People</h4>
-            <p>Emergency measures announced alongside a stabilization plan following early-morning evacuation.</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img alt="" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200&auto=format&fit=crop" />
-          <div class="pad">
-            <div class="meta">Feature • Governance</div>
-            <h4>How Parliament advances reform through bicameral review</h4>
-            <p>Understanding the Senate’s refinement role and the House of the People’s representative mandate.</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img alt="" src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?q=80&w=1200&auto=format&fit=crop" />
-          <div class="pad">
-            <div class="meta">Data • Economy</div>
-            <h4>Key indicators: employment, income and tax overview</h4>
-            <p>A quick look at employment (~83%), average income (₰100,046) and tax policy (40–70%).</p>
-          </div>
-        </article>
-      </div>
-    </div>
+    <h3>Seating Diagram</h3>
+    <img src="https://i.ibb.co/mCbWysfg/New-20-Diagram-1753493152223.png" alt="House Seating Diagram">
+    <ul>
+      <li style="color:#1f4ed6;"><b>Blue:</b> LaDfZ — Liberals and Democrats for Zurecíá</li>
+      <li style="color:#ff4c4c;"><b>Red:</b> NRP — National Rally Party</li>
+      <li style="color:#33cc66;"><b>Green:</b> ZPP — Zurecíá People’s Party</li>
+    </ul>
   </section>
 
-  <!-- ======= Focus areas ======= -->
-  <section class="section" style="background:var(--bg-alt);">
-    <div class="wrap">
-      <h3>Focus areas</h3>
-      <p class="lead">Explore themes shaping Zurecíá’s policies and partnerships.</p>
-      <div class="tiles">
-        <div class="tile">
-          <h5>Peace & security</h5>
-          <p>Upholding rule of law and safeguarding institutions.</p>
-        </div>
-        <div class="tile">
-          <h5>People & dignity</h5>
-          <p>Health, education and inclusive development across regions.</p>
-        </div>
-        <div class="tile">
-          <h5>Planet & resilience</h5>
-          <p>Climate readiness, protected areas and sustainable growth.</p>
-        </div>
-      </div>
-    </div>
+  <section id="judiciary">
+    <h2>Judiciary Branch — Supreme Court</h2>
+    <img src="https://i.ibb.co/0j3zqcCT/IMG-0009.png" alt="Supreme Court Building">
+    <p><b>Chief Justice:</b> Fatima Ahmed</p>
+    <p><b>Total Justices:</b> 9</p>
+    <p>The Supreme Court of Zurecíá, modeled on the U.S. system, is the highest authority on constitutional law and civil liberties.</p>
   </section>
 
-  <!-- ======= Footer ======= -->
-  <footer>
-    <div class="wrap">
-      <div class="footgrid">
-        <div>
-          <h6>Zurecíá Mission</h6>
-          <p class="lead" style="margin:0;color:var(--muted)">
-            Public information portal for Zurecíá. Materials available under
+  <section id="geography">
+    <h2>Geography</h2>
+    <p><b>Land Area:</b> 1.24 million km² (700,000 mi²)</p>
+    <p>- Mountains/foothills: 48.3%<br>
+       - Plains: 30.7%<br>
+       - Arable/settleable land: 21%</p>
+    <p><b>Water Area:</b> 200,000 km² (EEZ 200 miles)</p>
+    <p><b>Highest Point:</b> Mount Cusa — 2,970 m (9,740 ft)<br>
+       <b>Lowest Point:</b> Maбке Flat — 47 m below sea level (154 ft)</p>
+  </section>
+
+  <section id="economy">
+    <h2>Economy</h2>
+    <p><b>GDP:</b> 125 Trillion Denaris (₰)</p>
+    <p><b>HDI:</b> 90.18 (Very High)</p>
+    <p><b>Employment:</b> ~83%</p>
+    <p><b>Average Income:</b> ₰100,046</p>
+    <p><b>Currency:</b> Denari ₰ (1₰ = $0.965 USD)</p>
+    <p><b>Time Zone:</b> UTC +7 – +9</p>
+    <p><b>Internet TLD:</b> .zr</p>
+    <p><b>Ethnic Groups:</b></p>
+    <ul>
+      <li>Hweili — 63%</li>
+      <li>Olopois — 27%</li>
+      <li>Other — 10%</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Government of Zurecíá — All Rights Reserved
+</footer>
+
+</body>
+</html>
