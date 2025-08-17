@@ -3,120 +3,140 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zurecíá Government</title>
+<title>Zurecíá Government Portal</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- Navigation -->
 <header>
-  <h1>Zurecíá Government</h1>
-  <p>Official Government Website of Zurecíá</p>
+  <div class="nav-container">
+    <h1>Zurecíá Government</h1>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#government">Meet the Government</a></li>
+        <li><a href="#legacy">Legacy</a></li>
+        <li><a href="#people">People</a></li>
+        <li><a href="#factbook">Factbook</a></li>
+        <li><a href="#news">News</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<section class="hero">
-  <img src="images/hero1.jpg" alt="Government building hero image">
+<!-- Hero Section -->
+<section id="hero" class="hero">
+  <img src="images/hero.jpg" alt="Government Buildings Hero Image">
+  <div class="hero-text">
+    <h2>"Justice. Leadership. Progress."</h2>
+    <p>Official Portal of the Government of Zurecíá</p>
+  </div>
 </section>
 
-<section class="meet-government">
+<!-- Meet the Government -->
+<section id="government" class="section">
   <h2>Meet the Government</h2>
-  <div class="gov-section">
+  <div class="card-container">
     <div class="gov-card">
       <img src="images/president.jpg" alt="President">
       <h3>President: Ranaús Shillé</h3>
-      <p>Leader of the executive branch.</p>
+      <p>Leads the executive branch and oversees all national policy and ceremonies.</p>
     </div>
     <div class="gov-card">
       <img src="images/vp.jpg" alt="Vice President">
       <h3>Vice President: Malan Kavoa</h3>
-      <p>Assists and supports the President.</p>
+      <p>Supports the President in all official duties and succession planning.</p>
     </div>
     <div class="gov-card">
       <img src="images/house_speaker.jpg" alt="House Speaker">
       <h3>House Speaker: John Paige</h3>
-      <p>Leads the legislative branch.</p>
+      <p>Presides over the House of the People and legislative sessions.</p>
     </div>
     <div class="gov-card">
-      <img src="images/supreme_court.jpg" alt="Head Justice">
+      <img src="images/supreme_court.jpg" alt="Supreme Court">
       <h3>Head Justice: Fatima Ahmed</h3>
-      <p>Leads the Supreme Court of Zurecíá.</p>
+      <p>Ensures the constitutionality of all laws and protects civil liberties.</p>
     </div>
   </div>
 </section>
 
-<section class="stats">
-  <h2>Key Statistics</h2>
+<!-- Legacy / Heroes -->
+<section id="legacy" class="section">
+  <h2>Legacy & Heroes</h2>
+  <div class="card-container">
+    <div class="hero-card">
+      <img src="images/mahia_ukero.jpg" alt="Mahia Ukēro">
+      <h3>Mahia Ukēro</h3>
+      <p>Former President who modernized Zurecíá, improving social programs, infrastructure, and economic stability.</p>
+    </div>
+  </div>
+</section>
+
+<!-- People / Citizens -->
+<section id="people" class="section">
+  <h2>The People of Zurecíá</h2>
   <div class="stats-grid">
     <div class="stat-card">
       <p class="stat-number">2,585,000,000</p>
       <p class="stat-label">Population</p>
     </div>
     <div class="stat-card">
-      <p class="stat-number">₰125 Trillion</p>
-      <p class="stat-label">GDP</p>
+      <p class="stat-number">36.4%</p>
+      <p class="stat-label">Urban Population</p>
     </div>
     <div class="stat-card">
-      <p class="stat-number">90.18</p>
-      <p class="stat-label">HDI</p>
+      <p class="stat-number">623/km²</p>
+      <p class="stat-label">Population Density</p>
     </div>
-    <div class="stat-card">
-      <p class="stat-number">90.54</p>
-      <p class="stat-label">Lifespan</p>
-    </div>
+  </div>
+  <div class="ethnic-groups">
+    <h3>Ethnic Groups</h3>
+    <ul>
+      <li>Hweili – 63%</li>
+      <li>Olopois – 27%</li>
+      <li>Other – 10%</li>
+    </ul>
   </div>
 </section>
 
-<section class="legislature">
-  <h2>Legislature</h2>
-  <p>The bicameral Parliament consists of the Senate (Upper House) and House of the People (Lower House).</p>
-</section>
-
-<section class="judiciary">
-  <h2>Judiciary</h2>
-  <p>The Supreme Court consists of 9 justices, led by Head Justice Fatima Ahmed.</p>
-</section>
-
-<section class="economy">
-  <h2>Economy</h2>
-  <p>GDP: 125 Trillion Denaris (₰)</p>
-  <p>Employment: ~83%</p>
-  <p>Income: ₰100,046</p>
-  <p>Tax Rate: 40%-70%</p>
-  <p>Currency: Denari ₰</p>
-</section>
-
-<section class="geography">
-  <h2>Geography</h2>
-  <p>Land Area: 1.24 million km² | Water Area: 200,000 km²</p>
-  <p>Mountains & Foothills: 48.3% | Plains: 30.7% | Arable Land: 21%</p>
-  <p>EEZ: 200 miles | Highest Point: Mount Cusa 2,970m | Lowest: Maбке Flat 47m</p>
-</section>
-
-<section class="demographics">
-  <h2>Demographics</h2>
-  <p>Official Language: None | National Language: English</p>
-  <p>Demonym: Zurec(s)</p>
-  <p>Ethnic Groups: Hweili 63%, Olopois 27%, Other 10%</p>
-</section>
-
-<section class="symbols">
-  <h2>National Symbols</h2>
-  <div class="symbol-grid">
-    <img src="images/flag.png" alt="Flag">
-    <img src="images/coat_of_arms.png" alt="Coat of Arms">
+<!-- Factbook -->
+<section id="factbook" class="section">
+  <h2>Factbook</h2>
+  <div class="fact-card">
+    <h3>Economy</h3>
+    <p>GDP: ₰125 Trillion</p>
+    <p>Employment: ~83%</p>
+    <p>Income: ₰100,046</p>
+    <p>Tax Rate: 40%-70%</p>
+    <p>Currency: Denari ₰</p>
   </div>
-  <p>National Anthem: "Groed van Solauha"</p>
+  <div class="fact-card">
+    <h3>Geography</h3>
+    <p>Land Area: 1.24 million km² | Water Area: 200,000 km²</p>
+    <p>Mountains & Foothills: 48.3% | Plains: 30.7% | Arable Land: 21%</p>
+    <p>Highest Point: Mount Cusa 2,970 m | Lowest Point: Maбке Flat 47 m</p>
+  </div>
+  <div class="fact-card">
+    <h3>Symbols</h3>
+    <p>National Anthem: "Groed van Solauha"</p>
+    <p>Motto: "Not today, satan!”</p>
+    <p>Flag & Coat of Arms displayed above.</p>
+  </div>
 </section>
 
-<section class="news">
+<!-- News -->
+<section id="news" class="section">
   <h2>Latest News</h2>
   <div class="news-item">
-    <strong>[Date]</strong> - [Breaking news headline]. [Summary]
+    <strong>[Date]</strong> – ʒenat dezkrétna nu Prezedan Shillé na daurar sa tenekra retarn, pos vëdaktem senatrek hæm sekuril brakran evarin daulhaus nu Popal.
   </div>
   <div class="news-item">
-    <strong>[Date]</strong> - [Another headline]. [Summary]
+    <strong>[Date]</strong> – Trevokh nu mornan kridak ra Trakromir selnark, tan ofisrek Parlomentra heven redin u vaktren tempald.
   </div>
 </section>
 
+<!-- Footer -->
 <footer>
   <p>© Zurecíá Government. All rights reserved.</p>
 </footer>
