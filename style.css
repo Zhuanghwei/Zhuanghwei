@@ -1,47 +1,98 @@
 /* Base Styles */
 body {
-  font-family: Georgia, Times New Roman, serif;
+  font-family: 'Public Sans', Georgia, Times New Roman, serif;
   margin: 0;
   background-color: #f5f5f5;
   color: #111;
 }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; padding: 0; margin: 0; }
+
+/* Header / Navigation */
 header {
   background-color: #191C2D;
   color: white;
-  text-align: center;
-  padding: 3em 1em;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-header h1 { font-size: 2.5em; margin: 0; }
-header p { font-size: 1.2em; margin: 0.5em 0 0 0; }
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1em;
+}
+nav ul {
+  display: flex;
+  gap: 1em;
+}
+nav li a {
+  color: white;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  transition: background 0.3s, color 0.3s;
+}
+nav li a:hover {
+  background: #0b1020;
+  border-radius: 5px;
+}
 
 /* Hero Section */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
 .hero img {
   width: 100%;
   max-height: 500px;
   object-fit: cover;
 }
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(25,28,45,0.6);
+  padding: 1em 2em;
+  border-radius: 10px;
+}
+
+/* Section Titles */
+.section {
+  max-width: 1200px;
+  margin: 3em auto;
+  padding: 0 1em;
+}
+h2 {
+  text-align: center;
+  color: #191C2D;
+  margin-bottom: 1em;
+}
 
 /* Government Cards */
-.gov-section {
+.card-container {
   display: flex;
   flex-wrap: wrap;
   gap: 2em;
-  margin-top: 2em;
   justify-content: center;
 }
-.gov-card {
+.gov-card, .hero-card {
   background: white;
-  flex: 1 1 200px;
+  flex: 1 1 220px;
   padding: 1.5em;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
-.gov-card:hover {
+.gov-card:hover, .hero-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
-.gov-card img {
+.gov-card img, .hero-card img {
   width: 100%;
   border-radius: 5px;
   margin-bottom: 1em;
@@ -53,7 +104,6 @@ header p { font-size: 1.2em; margin: 0.5em 0 0 0; }
   flex-wrap: wrap;
   gap: 2em;
   justify-content: center;
-  margin-top: 2em;
 }
 .stat-card {
   background: #191C2D;
@@ -67,12 +117,30 @@ header p { font-size: 1.2em; margin: 0.5em 0 0 0; }
   font-size: 2em;
   font-weight: bold;
 }
-.stat-label {
-  margin-top: 0.5em;
+.stat-label { margin-top: 0.5em; }
+
+.ethnic-groups ul {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 1em;
+}
+.ethnic-groups li {
+  background: #e5e5e5;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+/* Factbook */
+.fact-card {
+  background: white;
+  padding: 1.5em;
+  margin: 1em 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* News */
-.news { margin-top: 3em; }
 .news-item {
   background: white;
   padding: 1em;
@@ -81,30 +149,87 @@ header p { font-size: 1.2em; margin: 0.5em 0 0 0; }
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* Symbols */
-.symbol-grid {
-  display: flex;
-  gap: 2em;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 1em 0;
-}
-.symbol-grid img {
-  width: 150px;
-  border-radius: 5px;
-}
-
-/* Section Titles */
-h2 {
-  text-align: center;
-  margin-bottom: 1em;
-  color: #191C2D;
-}
-
 /* Footer */
 footer {
   background: #191C2D;
   color: white;
   text-align: center;
   padding: 2em 1em;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .card-container, .stats-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* Hero Slider */
+.hero-slider {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  animation: slideAnimation 15s infinite;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(25,28,45,0.6);
+  padding: 1em 2em;
+  border-radius: 10px;
+  color: white;
+}
+
+/* Keyframes for sliding */
+@keyframes slideAnimation {
+  0% { transform: translateX(0%); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0%); }
+}
+/* News Ticker */
+.news-ticker {
+  background: #191C2D;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 2em 0;
+}
+
+.ticker-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: tickerScroll 20s linear infinite;
+}
+
+.ticker-content span {
+  display: inline-block;
+  margin-right: 3em;
+}
+
+@keyframes tickerScroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
 }
