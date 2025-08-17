@@ -1,26 +1,37 @@
-/* ========== VARIABLES ========== */
-:root{
-  --white:#ffffff;
-  --navy:#0b2b4a;
-  --muted:#91a6c0;
-  --accent:#0073b8; /* blue similar to official */
-  --gold:#D4AF37;
-  --card-bg: rgba(255,255,255,0.03);
-  --maxw:1200px;
-  --pad:18px;
+/* ================= VARIABLES ================= */
+:root {
+    --white: #ffffff;
+    --navy: #0b2b4a;
+    --muted: #91a6c0;
+    --accent: #0073b8; /* blue similar to official */
+    --gold: #D4AF37;
+    --card-bg: rgba(255,255,255,0.03);
+    --maxw: 1200px;
+    --pad: 18px;
 }
 
-/* ========== BASE ========== */
-*{box-sizing:border-box}
-html,body{height:100%}
+/* ================= BASE ================= */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
 body {
     margin: 0;
     background: linear-gradient(180deg, #0b2033 0%, #0e2a44 100%);
     color: #f5f5f5; /* off-white/light text */
-    font-family: 'Public Sans', "Segoe UI", sans-serif; 
+    font-family: 'Public Sans', Helvetica, Open Sans; /* body text */
+    line-height: 1.6;
 }
-  -webkit-font-smoothing:antialiased;
-}
+
+/* ================= HEADINGS ================= */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', Times New Roman; /* fancy script for headers */
+    color: #f5f5f5;
+    margin-bottom: 0.5em;
 
 /* Wrappers */
 .wrap{ width:min(var(--maxw),94%); margin:0 auto; }
