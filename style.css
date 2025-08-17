@@ -1,271 +1,129 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>[YOUR — SITE TITLE HERE]</title>
+/* ========== VARIABLES ========== */
+:root{
+  --white:#ffffff;
+  --navy:#0b2b4a;
+  --muted:#91a6c0;
+  --accent:#0073b8; /* blue similar to official */
+  --gold:#D4AF37;
+  --card-bg: rgba(255,255,255,0.03);
+  --maxw:1200px;
+  --pad:18px;
+}
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+/* ========== BASE ========== */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background: linear-gradient(180deg,#f8fbff 0%, #f3f6fb 100%); /* light overall like WhiteHouse */
+  color:#0b2033;
+  font-family: 'Public Sans', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
 
-  <!-- Utility bar -->
-  <div class="utilbar">
-    <div class="wrap util-inner">
-      <div class="util-left">
-        <small><a href="#">[YOUR — ACCESSIBILITY]</a></small>
-        <small><a href="#">[YOUR — LANGUAGE]</a></small>
-      </div>
-      <div class="util-right">
-        <small>[YOUR — SHORT UTILITY TEXT]</small>
-      </div>
-    </div>
-  </div>
+/* Wrappers */
+.wrap{ width:min(var(--maxw),94%); margin:0 auto; }
 
-  <!-- Masthead -->
-  <header class="masthead" role="banner">
-    <div class="wrap mast-inner">
-      <div class="branding">
-        <img class="seal" src="[YOUR — LOGO URL]" alt="[YOUR — LOGO ALT]">
-        <div class="title-block">
-          <h1>[YOUR — ORGANIZATION NAME]</h1>
-          <p class="subtitle">[YOUR — TAGLINE OR SLOGAN]</p>
-        </div>
-      </div>
+/* Utility bar */
+.utilbar{ background:#f2f6fa; border-bottom:1px solid rgba(16,24,40,.04); color:var(--muted); font-size:.92rem; }
+.util-inner{ display:flex; justify-content:space-between; padding:8px 0; align-items:center; }
 
-      <nav class="primary-nav" aria-label="Primary navigation">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">[YOUR — MENU]</button>
-        <ul id="nav-list" class="nav-list">
-          <li><a href="#home">[YOUR — HOME]</a></li>
-          <li><a href="#news">[YOUR — NEWS]</a></li>
-          <li><a href="#government">[YOUR — GOVERNMENT]</a></li>
-          <li><a href="#issues">[YOUR — ISSUES]</a></li>
-          <li><a href="#data">[YOUR — DATA]</a></li>
-          <li><a href="#contact">[YOUR — CONTACT]</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+/* Masthead */
+.masthead{ background: var(--white); box-shadow: 0 1px 0 rgba(16,24,40,.04); position:sticky; top:0; z-index:80; }
+.mast-inner{ display:flex; align-items:center; justify-content:space-between; gap:20px; padding:14px 0; }
+.branding{ display:flex; align-items:center; gap:12px; }
+.seal{ width:56px; height:56px; border-radius:8px; object-fit:cover; }
+.title-block h1{ margin:0; font-family: Georgia, "Times New Roman", serif; font-size:1.05rem; color:#071733; }
+.subtitle{ margin:0; color:var(--muted); font-size:.9rem; }
 
-  <!-- Hero -->
-  <main>
-    <section class="hero" id="home" role="region" aria-label="[YOUR — HERO REGION]">
-      <div class="hero-media" style="background-image:url('[YOUR — HERO IMAGE URL]')"></div>
-      <div class="hero-content wrap">
-        <div class="hero-text">
-          <h2>[YOUR — HERO TITLE HERE]</h2>
-          <p class="lead">[YOUR — HERO SUBTITLE / LEAD PARAGRAPH]</p>
-          <div class="cta-row">
-            <a class="btn primary" href="[YOUR — CTA LINK]">[YOUR — PRIMARY CTA]</a>
-            <a class="btn ghost" href="[YOUR — CTA LINK 2]">[YOUR — SECONDARY CTA]</a>
-          </div>
-        </div>
+/* Nav */
+.primary-nav{ display:flex; align-items:center; gap:10px; }
+.primary-nav ul{ list-style:none; display:flex; gap:8px; margin:0; padding:0; align-items:center; }
+.primary-nav a{ color:#0b2033; text-decoration:none; padding:8px 10px; border-radius:6px; font-weight:600; }
+.primary-nav a:hover{ background: rgba(0,115,184,0.06); color:var(--accent) }
+.nav-toggle{ display:none; background:transparent; border:1px solid rgba(0,0,0,0.06); padding:6px 10px; border-radius:6px; }
 
-        <aside class="hero-side" aria-label="[YOUR — AT-A-GLANCE]">
-          <div class="quick-facts">
-            <h4>[YOUR — AT A GLANCE TITLE]</h4>
-            <ul>
-              <li><strong>[YOUR — FACT 1 LABEL]:</strong> [YOUR — FACT 1 VALUE]</li>
-              <li><strong>[YOUR — FACT 2 LABEL]:</strong> [YOUR — FACT 2 VALUE]</li>
-              <li><strong>[YOUR — FACT 3 LABEL]:</strong> [YOUR — FACT 3 VALUE]</li>
-              <li><strong>[YOUR — FACT 4 LABEL]:</strong> [YOUR — FACT 4 VALUE]</li>
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </section>
+/* ========== HERO ========== */
+.hero{ position:relative; margin-top:8px; border-radius:8px; overflow:hidden; box-shadow: 0 6px 24px rgba(2,6,23,0.06); }
+.hero-media{ position:absolute; inset:0; background-size:cover; background-position:center; filter:contrast(.95) saturate(.95); }
+.hero-content{ position:relative; display:grid; grid-template-columns: 1fr 320px; gap:20px; align-items:center; padding:48px 0; }
+.hero-text{ padding:24px; background: linear-gradient(90deg, rgba(255,255,255,0.0), rgba(255,255,255,0.0)); }
+.hero h2{ margin:0 0 12px; font-family: Georgia, "Times New Roman", serif; color:var(--white); font-size: clamp(1.6rem,3.6vw,2.4rem); text-shadow: 0 6px 20px rgba(2,6,23,0.45); }
+.lead{ margin:0 0 18px; color: rgba(255,255,255,0.9); font-size:1.03rem; max-width:58ch; }
 
-    <!-- Top news strip -->
-    <section class="top-news wrap" aria-hidden="false">
-      <div class="news-compact">
-        <strong>[YOUR — BREAKING]</strong> [YOUR — SHORT BREAKING OR LEAD SENTENCE]
-      </div>
-    </section>
+/* CTA */
+.cta-row{ display:flex; gap:12px; flex-wrap:wrap; }
+.btn{ display:inline-block; padding:10px 16px; border-radius:8px; font-weight:700; text-decoration:none; }
+.primary{ background:var(--gold); color:#0b2033; }
+.ghost{ border:1px solid rgba(255,255,255,0.18); color:rgba(255,255,255,0.95); background:transparent; }
 
-    <!-- Content grid -->
-    <section class="content wrap">
+/* hero aside */
+.hero-side{ padding:8px 12px; }
+.quick-facts{ background:var(--white); border-radius:8px; padding:12px; color:#0b2033; box-shadow:0 6px 18px rgba(2,6,23,.06); }
+.quick-facts h4{ margin:0 0 8px; font-family: Georgia, serif; }
+.quick-facts ul{ list-style:none; padding:0; margin:0; color:var(--muted); }
+.quick-facts li{ margin:8px 0; font-weight:600; }
 
-      <!-- Main column -->
-      <div class="col col-main">
+/* top news strip */
+.top-news{ padding:10px 0; background:transparent; }
+.news-compact{ background: #fff; border-radius:8px; padding:10px 12px; color:var(--muted); box-shadow: 0 6px 18px rgba(2,6,23,0.03); font-weight:700; }
 
-        <!-- Latest News -->
-        <section id="news" class="panel" aria-labelledby="news-title">
-          <h3 id="news-title" class="panel-title">[YOUR — LATEST NEWS HEADING]</h3>
-          <div class="news-grid">
-            <!-- repeat these articles; replace placeholders -->
-            <article class="news-item">
-              <img src="[YOUR — NEWS IMAGE 1]" alt="[YOUR — NEWS ALT 1]">
-              <div class="news-body">
-                <time datetime="[YYYY-MM-DD]">[YOUR — DATE 1]</time>
-                <h4>[YOUR — NEWS ITEM TITLE 1]</h4>
-                <p>[YOUR — NEWS ITEM BLURB 1]</p>
-                <a class="read-more" href="[YOUR — NEWS LINK 1]">[YOUR — READ MORE]</a>
-              </div>
-            </article>
+/* ========== CONTENT GRID ========== */
+.content{ display:grid; grid-template-columns: 1fr 360px; gap:28px; margin-top:22px; align-items:start; }
 
-            <article class="news-item">
-              <img src="[YOUR — NEWS IMAGE 2]" alt="[YOUR — NEWS ALT 2]">
-              <div class="news-body">
-                <time datetime="[YYYY-MM-DD]">[YOUR — DATE 2]</time>
-                <h4>[YOUR — NEWS ITEM TITLE 2]</h4>
-                <p>[YOUR — NEWS ITEM BLURB 2]</p>
-                <a class="read-more" href="[YOUR — NEWS LINK 2]">[YOUR — READ MORE]</a>
-              </div>
-            </article>
+/* Panels */
+.panel{ background:var(--white); border-radius:10px; padding:18px; box-shadow: 0 10px 28px rgba(2,6,23,0.04); margin-bottom:20px; }
+.panel-title{ margin:0 0 14px; font-family: Georgia, serif; color:#07203a; }
 
-            <article class="news-item">
-              <img src="[YOUR — NEWS IMAGE 3]" alt="[YOUR — NEWS ALT 3]">
-              <div class="news-body">
-                <time datetime="[YYYY-MM-DD]">[YOUR — DATE 3]</time>
-                <h4>[YOUR — NEWS ITEM TITLE 3]</h4>
-                <p>[YOUR — NEWS ITEM BLURB 3]</p>
-                <a class="read-more" href="[YOUR — NEWS LINK 3]">[YOUR — READ MORE]</a>
-              </div>
-            </article>
-          </div>
-        </section>
+/* NEWS GRID */
+.news-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
+.news-item{ display:flex; flex-direction:column; border-radius:8px; overflow:hidden; background: #fff; }
+.news-item img{ width:100%; height:160px; object-fit:cover; display:block; }
+.news-body{ padding:12px; }
+.news-body time{ color:var(--muted); display:block; font-size:.86rem; margin-bottom:6px; }
+.news-body h4{ margin:0 0 8px; font-family: Georgia, serif; color:#07203a; }
+.news-body p{ margin:0 0 10px; color:var(--muted); }
+.read-more{ color:var(--accent); font-weight:700; text-decoration:none; }
 
-        <!-- Featured topics -->
-        <section class="panel" aria-labelledby="featured-title">
-          <h3 id="featured-title" class="panel-title">[YOUR — FEATURED HEADING]</h3>
-          <div class="featured-grid">
-            <a class="feature" href="[YOUR — FEATURE LINK 1]">
-              <h4>[YOUR — FEATURE TITLE 1]</h4>
-              <p>[YOUR — FEATURE BLURB 1]</p>
-            </a>
-            <a class="feature" href="[YOUR — FEATURE LINK 2]">
-              <h4>[YOUR — FEATURE TITLE 2]</h4>
-              <p>[YOUR — FEATURE BLURB 2]</p>
-            </a>
-            <a class="feature" href="[YOUR — FEATURE LINK 3]">
-              <h4>[YOUR — FEATURE TITLE 3]</h4>
-              <p>[YOUR — FEATURE BLURB 3]</p>
-            </a>
-          </div>
-        </section>
+/* FEATURED */
+.featured-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; }
+.feature{ display:block; padding:12px; border-radius:8px; border:1px solid rgba(2,6,23,0.04); background:#fff; color:#07203a; text-decoration:none; }
 
-      </div>
+/* SIDE COLUMN: people list, links, snapshot */
+.col-side .panel{ margin-bottom:16px; }
+.people-list{ display:grid; gap:10px; }
+.person{ display:flex; gap:10px; align-items:center; }
+.person img{ width:56px; height:56px; object-fit:cover; border-radius:8px; }
+.person-info strong{ display:block; font-size:0.98rem; }
 
-      <!-- Side column -->
-      <aside class="col col-side">
+/* quick links */
+.quick-links ul{ list-style:none; padding:0; margin:0; }
+.quick-links li{ margin:8px 0; }
+.quick-links a{ text-decoration:none; color:var(--accent); font-weight:700; }
 
-        <!-- Meet the administration -->
-        <section id="government" class="panel" aria-labelledby="gov-title">
-          <h3 id="gov-title" class="panel-title">[YOUR — MEET THE GOVERNMENT]</h3>
-          <div class="people-list">
-            <div class="person">
-              <img src="[YOUR — PERSON 1 IMG]" alt="[YOUR — PERSON 1 ALT]">
-              <div class="person-info">
-                <strong>[YOUR — PERSON 1 NAME]</strong>
-                <small>[YOUR — PERSON 1 TITLE]</small>
-              </div>
-            </div>
+/* data snapshot */
+.data-snapshot .stats{ display:flex; gap:10px; flex-direction:column; }
+.stat-num{ font-weight:800; color:#07203a; display:block; }
 
-            <div class="person">
-              <img src="[YOUR — PERSON 2 IMG]" alt="[YOUR — PERSON 2 ALT]">
-              <div class="person-info">
-                <strong>[YOUR — PERSON 2 NAME]</strong>
-                <small>[YOUR — PERSON 2 TITLE]</small>
-              </div>
-            </div>
+/* lower branch panels */
+.branch-panels{ display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); margin:28px 0; }
+.branch{ background:#fff; border-radius:8px; padding:12px; text-align:left; box-shadow: 0 10px 28px rgba(2,6,23,0.04); }
+.branch img{ width:100%; height:140px; object-fit:cover; border-radius:6px; margin-bottom:10px; }
 
-            <div class="person">
-              <img src="[YOUR — PERSON 3 IMG]" alt="[YOUR — PERSON 3 ALT]">
-              <div class="person-info">
-                <strong>[YOUR — PERSON 3 NAME]</strong>
-                <small>[YOUR — PERSON 3 TITLE]</small>
-              </div>
-            </div>
-          </div>
-        </section>
+/* footer */
+.site-footer{ margin-top:40px; padding:28px 0; background:#f3f6fb; border-top:1px solid rgba(16,24,40,0.04); }
+.footer-inner{ display:flex; justify-content:space-between; gap:20px; align-items:center; }
+.footer-inner .seal.small{ width:42px; height:42px; }
 
-        <!-- Quick links -->
-        <section class="panel quick-links" aria-labelledby="quicklinks-title">
-          <h4 id="quicklinks-title">[YOUR — QUICK LINKS]</h4>
-          <ul>
-            <li><a href="[YOUR — LINK A]">[YOUR — LINK A LABEL]</a></li>
-            <li><a href="[YOUR — LINK B]">[YOUR — LINK B LABEL]</a></li>
-            <li><a href="[YOUR — LINK C]">[YOUR — LINK C LABEL]</a></li>
-            <li><a href="[YOUR — LINK D]">[YOUR — LINK D LABEL]</a></li>
-          </ul>
-        </section>
-
-        <!-- Snapshot -->
-        <section class="panel data-snapshot" aria-labelledby="snapshot-title">
-          <h4 id="snapshot-title">[YOUR — SNAPSHOT]</h4>
-          <div class="stats">
-            <div><span class="stat-num">[YOUR — POPULATION]</span><small>[YOUR — POP LABEL]</small></div>
-            <div><span class="stat-num">[YOUR — GDP]</span><small>[YOUR — GDP LABEL]</small></div>
-            <div><span class="stat-num">[YOUR — HDI]</span><small>[YOUR — HDI LABEL]</small></div>
-          </div>
-        </section>
-
-      </aside>
-    </section>
-
-    <!-- Lower panels for branches etc. -->
-    <section class="wrap lower-panels" aria-label="[YOUR — BRANCHES]">
-      <div class="branch-panels">
-        <article class="branch">
-          <img src="[YOUR — EXEC IMAGE]" alt="[YOUR — EXEC ALT]">
-          <h4>[YOUR — EXEC TITLE]</h4>
-          <p>[YOUR — EXEC BLURB]</p>
-        </article>
-
-        <article class="branch">
-          <img src="[YOUR — LEG IMAGE]" alt="[YOUR — LEG ALT]">
-          <h4>[YOUR — LEG TITLE]</h4>
-          <p>[YOUR — LEG BLURB]</p>
-        </article>
-
-        <article class="branch">
-          <img src="[YOUR — JUD IMAGE]" alt="[YOUR — JUD ALT]">
-          <h4>[YOUR — JUD TITLE]</h4>
-          <p>[YOUR — JUD BLURB]</p>
-        </article>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="wrap footer-inner">
-      <div class="foot-left">
-        <img class="seal small" src="[YOUR — LOGO URL]" alt="[YOUR — LOGO ALT]">
-        <div>
-          <strong>[YOUR — ORGANIZATION NAME]</strong><br>
-          [YOUR — SHORT FOOTER TEXT]
-        </div>
-      </div>
-
-      <div class="foot-right">
-        <nav class="foot-nav">
-          <a href="#">[YOUR — PRIVACY]</a>
-          <a href="#">[YOUR — ACCESSIBILITY]</a>
-          <a href="#">[YOUR — CONTACT]</a>
-        </nav>
-        <div class="copyright">[YOUR — COPYRIGHT LINE]</div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Tiny script for mobile nav toggle -->
-  <script>
-    (function(){
-      const toggle = document.querySelector('.nav-toggle');
-      const navList = document.getElementById('nav-list');
-      if(toggle && navList){
-        toggle.addEventListener('click', ()=> {
-          const expanded = toggle.getAttribute('aria-expanded') === 'true';
-          toggle.setAttribute('aria-expanded', !expanded);
-          navList.style.display = expanded ? '' : 'block';
-        });
-      }
-    })();
-  </script>
-</body>
-</html>
+/* responsive */
+@media (max-width: 1100px){
+  .hero-content{ grid-template-columns: 1fr; padding:28px 0; }
+  .content{ grid-template-columns:1fr; }
+  .primary-nav ul{ display:none; }
+  .nav-toggle{ display:inline-block; }
+}
+@media (max-width:680px){
+  .hero{ border-radius:0; }
+  .hero h2{ font-size:1.25rem; }
+  .quick-facts{ display:none; }
+}
