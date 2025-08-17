@@ -1,67 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zurecíá Government Portal</title>
-<link rel="stylesheet" href="style.css"> 
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Government of Zurecíá — Official Portal</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Headings use Georgia (system fallback provided) -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- Navigation -->
-<header>
-  <div class="nav-container">
-    <h1>Zurecíá Government</h1>
-    <nav>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#government">Meet the Government</a></li>
-        <li><a href="#legacy">Legacy</a></li>
-        <li><a href="#people">People</a></li>
-        <li><a href="#factbook">Factbook</a></li>
-        <li><a href="#news">News</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<!-- Hero Section -->
-<section id="hero" class="hero">
-  <img src="images/hero.jpg" alt="Government Buildings Hero Image">
-  <div class="hero-text">
-    <h2>"Justice. Leadership. Progress."</h2>
-    <p>Official Portal of the Government of Zurecíá</p>
-  </div>
-</section>
-
-<!-- Meet the Government -->
-<section id="government" class="section">
-  <h2>Meet the Government</h2>
-  <div class="card-container">
-    <div class="gov-card">
-      <img src="images/president.jpg" alt="President">
-      <h3>President: Ranaús Shillé</h3>
-      <p>Leads the executive branch and oversees all national policy and ceremonies.</p>
-    </div>
-    <div class="gov-card">
-      <img src="images/vp.jpg" alt="Vice President">
-      <h3>Vice President: Malan Kavoa</h3>
-      <p>Supports the President in all official duties and succession planning.</p>
-    </div>
-    <div class="gov-card">
-      <img src="images/house_speaker.jpg" alt="House Speaker">
-      <h3>House Speaker: John Paige</h3>
-      <p>Presides over the House of the People and legislative sessions.</p>
-    </div>
-    <div class="gov-card">
-      <img src="images/supreme_court.jpg" alt="Supreme Court">
-      <h3>Head Justice: Fatima Ahmed</h3>
-      <p>Ensures the constitutionality of all laws and protects civil liberties.</p>
+  <!-- Utility bar -->
+  <div class="utilbar">
+    <div class="wrap util-inner">
+      <div class="util-left">
+        <small><a href="#">Accessibility</a></small>
+        <small><a href="#">Language</a></small>
+      </div>
+      <div class="util-right">
+        <small>Official information portal</small>
+      </div>
     </div>
   </div>
-</section>
 
-<!-- Hero Slider Section -->
+  <!-- Masthead -->
+  <header class="masthead" role="banner">
+    <div class="wrap mast-inner">
+      <div class="branding">
+        <img class="seal" src="https://i.ibb.co/1GkyGZHn/IMG-0072.webp" alt="Zurecíá seal">
+        <div class="title-block">
+          <h1>Government of Zurecíá</h1>
+          <p class="subtitle">Unity • Liberty • Progress</p>
+        </div>
+      </div>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+        <ul id="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#government">Government</a></li>
+          <li><a href="#issues">Issues</a></li>
+          <li><a href="#data">Data</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+ <!-- Hero Slider Section -->
 <section id="hero" class="hero-slider">
   <div class="slides">
     <div class="slide">
@@ -87,35 +76,7 @@
     </div>
   </div>
 </section>
-
-<!-- People / Citizens -->
-<section id="people" class="section">
-  <h2>The People of Zurecíá</h2>
-  <div class="stats-grid">
-    <div class="stat-card">
-      <p class="stat-number">2,585,000,000</p>
-      <p class="stat-label">Population</p>
-    </div>
-    <div class="stat-card">
-      <p class="stat-number">36.4%</p>
-      <p class="stat-label">Urban Population</p>
-    </div>
-    <div class="stat-card">
-      <p class="stat-number">623/km²</p>
-      <p class="stat-label">Population Density</p>
-    </div>
-  </div>
-  <div class="ethnic-groups">
-    <h3>Ethnic Groups</h3>
-    <ul>
-      <li>Hweili – 63%</li>
-      <li>Olopois – 27%</li>
-      <li>Other – 10%</li>
-    </ul>
-  </div>
-</section>
-
-<!-- About Zurecíá -->
+          <!-- Factbook -->
 <section id="factbook" class="section">
   <h2>Factbook</h2>
   <div class="fact-card">
@@ -138,19 +99,14 @@
     <p>Motto: "Not today, satan!”</p>
     <p>Flag & Coat of Arms displayed above.</p>
   </div>
-</section>
+    </section>
 
-<!-- News -->
-<section id="news" class="section">
-  <h2>Latest News</h2>
-  <div class="news-item">
-    <strong>[Date]</strong> – ʒenat dezkrétna nu Prezedan Shillé na daurar sa tenekra retarn, pos vëdaktem senatrek hæm sekuril brakran evarin daulhaus nu Popal.
-  </div>
-  <div class="news-item">
-    <strong>[Date]</strong> – Trevokh nu mornan kridak ra Trakromir selnark, tan ofisrek Parlomentra heven redin u vaktren tempald.
-  </div>
-</section>
-  <!-- News Ticker -->
+    <!-- Top news strip (small) -->
+    <section class="top-news wrap">
+      <div class="news-compact">
+        <strong>Breaking:</strong> President Shillé issues directive after security incident at Parliament — read statement.
+      </div>
+      <!-- News Ticker -->
 <div class="news-ticker">
   <div class="ticker-content">
     <span>[08:42] – ʒenat dezkrétna nu Prezedan Shillé na daurar sa tenekra retarn.</span>
@@ -159,12 +115,178 @@
     <span>[09:30] – Oradrek nu Domahun deklarit da retarn “vontel sur truska.”</span>
   </div>
 </div>
+    </section>
 
-<!-- Footer -->
-<footer>
-  <p>© Zurecíá Government. All rights reserved.</p>
-</footer>
+    <!-- Main content grid -->
+    <section class="content wrap">
 
+      <!-- Left column: news & featured -->
+      <div class="col col-main">
+
+        <!-- Latest News -->
+        <section id="news" class="panel">
+          <h3 class="panel-title">Latest News</h3>
+          <div class="news-grid">
+            <!-- Article cards -->
+            <article class="news-item">
+              <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg" alt="Infrastructure project">
+              <div class="news-body">
+                <time datetime="2025-08-16">Aug 16, 2025</time>
+                <h4>National Infrastructure Initiative Launched</h4>
+                <p>Zurecíá begins a multi-year program to modernize roads, ports and urban transit.</p>
+                <a class="read-more" href="#">Read</a>
+              </div>
+            </article>
+
+            <article class="news-item">
+              <img src="https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg" alt="Classroom">
+              <div class="news-body">
+                <time datetime="2025-07-28">Jul 28, 2025</time>
+                <h4>Education Reform Completed</h4>
+                <p>Curriculum overhaul reaches nationwide coverage — literacy and skills programs expand.</p>
+                <a class="read-more" href="#">Read</a>
+              </div>
+            </article>
+
+            <article class="news-item">
+              <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Press conference">
+              <div class="news-body">
+                <time datetime="2025-06-01">Jun 1, 2025</time>
+                <h4>Executive Address on Economic Priorities</h4>
+                <p>The President outlines a five-year strategy to sustain social and economic gains.</p>
+                <a class="read-more" href="#">Read</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Featured topics -->
+        <section class="panel">
+          <h3 class="panel-title">Featured</h3>
+          <div class="featured-grid">
+            <a class="feature" href="#">
+              <h4>Public Health &amp; Care</h4>
+              <p>Overview of universal healthcare, expansion and reforms.</p>
+            </a>
+            <a class="feature" href="#">
+              <h4>Education &amp; Skills</h4>
+              <p>Programs for youth and lifelong learning.</p>
+            </a>
+            <a class="feature" href="#">
+              <h4>Infrastructure &amp; Mobility</h4>
+              <p>Capital investments and connectivity projects.</p>
+            </a>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Right column: gov, people, quick links -->
+      <aside class="col col-side">
+
+        <!-- Meet the administration -->
+        <section id="government" class="panel">
+          <h3 class="panel-title">Meet the Government</h3>
+          <div class="people-list">
+            <div class="person">
+              <img src="https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg" alt="Ranaús Shillé">
+              <div class="person-info">
+                <strong>Ranaús Shillé</strong>
+                <small>President</small>
+              </div>
+            </div>
+
+            <div class="person">
+              <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" alt="John Paige">
+              <div class="person-info">
+                <strong>John Paige</strong>
+                <small>House Speaker</small>
+              </div>
+            </div>
+
+            <div class="person">
+              <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" alt="Fatima Ahmed">
+              <div class="person-info">
+                <strong>Fatima Ahmed</strong>
+                <small>Head Justice</small>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Quick links (china-style compact panel) -->
+        <section class="panel quick-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Factbook</a></li>
+            <li><a href="#">Parliament page</a></li>
+            <li><a href="#">Party pages</a></li>
+            <li><a href="#">Open data</a></li>
+          </ul>
+        </section>
+        </aside>  
+    </section>
+
+    <!-- Footer-like secondary content: branches + hero legacy -->
+    <section class="wrap lower-panels">
+
+      <div class="branch-panels">
+        <article class="branch">
+          <img src="https://i.ibb.co/9khSM6dP/IMG-0018.png" alt="Executive building">
+          <h4>Executive Branch</h4>
+          <p>President Ranaús Shillé &mdash; Chief executive and head of state.</p>
+        </article>
+
+        <article class="branch">
+          <img src="https://i.ibb.co/RkXdTwnQ/IMG-0017.png" alt="Parliament">
+          <h4>Legislative Branch</h4>
+          <p>Parliament: Senate (upper) and House of the People (lower).</p>
+        </article>
+
+        <article class="branch">
+          <img src="https://i.ibb.co/0j3zqcCT/IMG-0009.png" alt="Supreme Court">
+          <h4>Judicial Branch</h4>
+          <p>Supreme Court — final arbiter of constitutional law (9 justices).</p>
+        </article>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="foot-left">
+        <img class="seal small" src="https://i.ibb.co/1GkyGZHn/IMG-0072.webp" alt="seal">
+        <div>
+          <strong>Government of Zurecíá</strong><br>
+          Official information portal
+        </div>
+      </div>
+
+      <div class="foot-right">
+        <nav class="foot-nav">
+          <a href="#">Privacy</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Contact</a>
+        </nav>
+        <div class="copyright">&copy; 2025 Government of Zurecíá</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Optional: tiny script to handle nav toggle (works without JS too) -->
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const navList = document.getElementById('nav-list');
+    if(toggle){
+      toggle.addEventListener('click', ()=> {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !expanded);
+        navList.style.display = expanded ? '' : 'block';
+      });
+    }
+  </script>
 </body>
 </html>
-
