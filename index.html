@@ -4,32 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zurecíá Government</title>
-<style>
-  body {
-    font-family: Georgia, Times New Roman, serif;
-    margin: 0;
-    background-color: #f5f5f5;
-    color: #111;
-  }
-  header {
-    background-color: #191C2D;
-    color: white;
-    text-align: center;
-    padding: 3em 1em;
-  }
-  header h1 { font-size: 2.5em; margin: 0; }
-  header p { font-size: 1.2em; margin: 0.5em 0 0 0; }
-  section { padding: 3em 1em; max-width: 1200px; margin: auto; }
-  .hero img { width: 100%; max-height: 500px; object-fit: cover; }
-  .gov-section { display: flex; flex-wrap: wrap; gap: 2em; margin-top: 2em; }
-  .gov-card { background: white; flex: 1 1 200px; padding: 1.5em; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);}
-  .gov-card img { width: 100%; border-radius: 5px; margin-bottom: 1em; }
-  .counters { display: flex; flex-wrap: wrap; gap: 2em; justify-content: center; margin-top: 2em; }
-  .counter { background: #191C2D; color: white; flex: 1 1 150px; padding: 2em; border-radius: 10px; text-align: center; font-size: 1.5em; }
-  .counter span { font-size: 2em; display: block; margin-top: 0.5em; }
-  .news { margin-top: 3em; }
-  .news-item { background: white; padding: 1em; border-radius: 10px; margin-bottom: 1em; box-shadow: 0 2px 6px rgba(0,0,0,0.1);}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -39,67 +14,112 @@
 </header>
 
 <section class="hero">
-  <img src="[image URL]" alt="Government building hero image">
+  <img src="images/hero1.jpg" alt="Government building hero image">
 </section>
 
-<section class="gov-section">
-  <div class="gov-card">
-    <img src="[image URL]" alt="President">
-    <h3>President: Ranaús Shillé</h3>
-    <p>Leader of the executive branch.</p>
-  </div>
-  <div class="gov-card">
-    <img src="[image URL]" alt="Vice President">
-    <h3>Vice President: Malan Kavoa</h3>
-    <p>Assists and supports the President.</p>
-  </div>
-  <div class="gov-card">
-    <img src="[image URL]" alt="House Speaker">
-    <h3>House Speaker: John Paige</h3>
-    <p>Leads the legislative branch.</p>
-  </div>
-  <div class="gov-card">
-    <img src="[image URL]" alt="Head Justice">
-    <h3>Head Justice: Fatima Ahmed</h3>
-    <p>Leads the Supreme Court of Zurecíá.</p>
+<section class="meet-government">
+  <h2>Meet the Government</h2>
+  <div class="gov-section">
+    <div class="gov-card">
+      <img src="images/president.jpg" alt="President">
+      <h3>President: Ranaús Shillé</h3>
+      <p>Leader of the executive branch.</p>
+    </div>
+    <div class="gov-card">
+      <img src="images/vp.jpg" alt="Vice President">
+      <h3>Vice President: Malan Kavoa</h3>
+      <p>Assists and supports the President.</p>
+    </div>
+    <div class="gov-card">
+      <img src="images/house_speaker.jpg" alt="House Speaker">
+      <h3>House Speaker: John Paige</h3>
+      <p>Leads the legislative branch.</p>
+    </div>
+    <div class="gov-card">
+      <img src="images/supreme_court.jpg" alt="Head Justice">
+      <h3>Head Justice: Fatima Ahmed</h3>
+      <p>Leads the Supreme Court of Zurecíá.</p>
+    </div>
   </div>
 </section>
 
-<section class="counters">
-  <div class="counter">Population <span data-target="2585000000">0</span></div>
-  <div class="counter">GDP (₰) <span data-target="125000000000000">0</span></div>
-  <div class="counter">HDI <span data-target="90.18">0</span></div>
-  <div class="counter">Lifespan <span data-target="90.54">0</span></div>
+<section class="stats">
+  <h2>Key Statistics</h2>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <p class="stat-number">2,585,000,000</p>
+      <p class="stat-label">Population</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-number">₰125 Trillion</p>
+      <p class="stat-label">GDP</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-number">90.18</p>
+      <p class="stat-label">HDI</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-number">90.54</p>
+      <p class="stat-label">Lifespan</p>
+    </div>
+  </div>
+</section>
+
+<section class="legislature">
+  <h2>Legislature</h2>
+  <p>The bicameral Parliament consists of the Senate (Upper House) and House of the People (Lower House).</p>
+</section>
+
+<section class="judiciary">
+  <h2>Judiciary</h2>
+  <p>The Supreme Court consists of 9 justices, led by Head Justice Fatima Ahmed.</p>
+</section>
+
+<section class="economy">
+  <h2>Economy</h2>
+  <p>GDP: 125 Trillion Denaris (₰)</p>
+  <p>Employment: ~83%</p>
+  <p>Income: ₰100,046</p>
+  <p>Tax Rate: 40%-70%</p>
+  <p>Currency: Denari ₰</p>
+</section>
+
+<section class="geography">
+  <h2>Geography</h2>
+  <p>Land Area: 1.24 million km² | Water Area: 200,000 km²</p>
+  <p>Mountains & Foothills: 48.3% | Plains: 30.7% | Arable Land: 21%</p>
+  <p>EEZ: 200 miles | Highest Point: Mount Cusa 2,970m | Lowest: Maбке Flat 47m</p>
+</section>
+
+<section class="demographics">
+  <h2>Demographics</h2>
+  <p>Official Language: None | National Language: English</p>
+  <p>Demonym: Zurec(s)</p>
+  <p>Ethnic Groups: Hweili 63%, Olopois 27%, Other 10%</p>
+</section>
+
+<section class="symbols">
+  <h2>National Symbols</h2>
+  <div class="symbol-grid">
+    <img src="images/flag.png" alt="Flag">
+    <img src="images/coat_of_arms.png" alt="Coat of Arms">
+  </div>
+  <p>National Anthem: "Groed van Solauha"</p>
 </section>
 
 <section class="news">
   <h2>Latest News</h2>
   <div class="news-item">
-    <strong>[Date]</strong> - [Breaking news headline here]. [Short summary of the update].
+    <strong>[Date]</strong> - [Breaking news headline]. [Summary]
   </div>
   <div class="news-item">
-    <strong>[Date]</strong> - [Another headline]. [Summary...].
+    <strong>[Date]</strong> - [Another headline]. [Summary]
   </div>
 </section>
 
-<script>
-  const counters = document.querySelectorAll('.counter span');
-  counters.forEach(span => {
-    const target = +span.getAttribute('data-target');
-    let count = 0;
-    const step = target / 200; // adjust speed
-    function update() {
-      count += step;
-      if (count >= target) {
-        span.textContent = target.toLocaleString('en-US', {maximumFractionDigits: 2});
-      } else {
-        span.textContent = count.toLocaleString('en-US', {maximumFractionDigits: 2});
-        requestAnimationFrame(update);
-      }
-    }
-    update();
-  });
-</script>
+<footer>
+  <p>© Zurecíá Government. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
