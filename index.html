@@ -1,215 +1,271 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zurecíá Government Portal</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>[YOUR — SITE TITLE HERE]</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Top Bar / Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <img class="brand-mark" src="https://i.ibb.co/1GkyGZHn/IMG-0072.webp" alt="Zurecíá emblem" />
-        <div class="brand-text">
-          <h1>Government of Zurecíá</h1>
-          <p>Unity • Liberty • Progress</p>
+  <!-- Utility bar -->
+  <div class="utilbar">
+    <div class="wrap util-inner">
+      <div class="util-left">
+        <small><a href="#">[YOUR — ACCESSIBILITY]</a></small>
+        <small><a href="#">[YOUR — LANGUAGE]</a></small>
+      </div>
+      <div class="util-right">
+        <small>[YOUR — SHORT UTILITY TEXT]</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Masthead -->
+  <header class="masthead" role="banner">
+    <div class="wrap mast-inner">
+      <div class="branding">
+        <img class="seal" src="[YOUR — LOGO URL]" alt="[YOUR — LOGO ALT]">
+        <div class="title-block">
+          <h1>[YOUR — ORGANIZATION NAME]</h1>
+          <p class="subtitle">[YOUR — TAGLINE OR SLOGAN]</p>
         </div>
       </div>
-      <nav class="main-nav">
-        <a href="#hero">Home</a>
-        <a href="#government">Meet the Government</a>
-        <a href="#branches">Branches</a>
-        <a href="#citizens">Our People</a>
-        <a href="#news">News</a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">[YOUR — MENU]</button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="#home">[YOUR — HOME]</a></li>
+          <li><a href="#news">[YOUR — NEWS]</a></li>
+          <li><a href="#government">[YOUR — GOVERNMENT]</a></li>
+          <li><a href="#issues">[YOUR — ISSUES]</a></li>
+          <li><a href="#data">[YOUR — DATA]</a></li>
+          <li><a href="#contact">[YOUR — CONTACT]</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section id="hero" class="hero">
-    <div class="hero-overlay">
-      <h2>Mahia Ukēro: Architect of Zurecíá’s Modern Era</h2>
-      <p>Leading social and economic transformation across the nation.</p>
-      <a class="btn btn-gold" href="#legacy">Learn About Her Legacy</a>
-      <div class="ticker-wrap">
-        <div class="ticker">
-          <span>GDP growth +7% &nbsp;•&nbsp; Literacy 98% &nbsp;•&nbsp; Infrastructure modernized 95% &nbsp;•&nbsp; Universal healthcare</span>
+  <main>
+    <section class="hero" id="home" role="region" aria-label="[YOUR — HERO REGION]">
+      <div class="hero-media" style="background-image:url('[YOUR — HERO IMAGE URL]')"></div>
+      <div class="hero-content wrap">
+        <div class="hero-text">
+          <h2>[YOUR — HERO TITLE HERE]</h2>
+          <p class="lead">[YOUR — HERO SUBTITLE / LEAD PARAGRAPH]</p>
+          <div class="cta-row">
+            <a class="btn primary" href="[YOUR — CTA LINK]">[YOUR — PRIMARY CTA]</a>
+            <a class="btn ghost" href="[YOUR — CTA LINK 2]">[YOUR — SECONDARY CTA]</a>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Meet the Government -->
-  <section id="government" class="section">
-    <div class="container">
-      <h3 class="section-title">Meet the Government</h3>
-      <div class="card-grid">
-        <article class="card">
-          <span class="badge">Executive</span>
-          <img src="https://i.ibb.co/9khSM6dP/IMG-0018.png" alt="Executive Building" />
-          <h4>Ranaús Shillé</h4>
-          <p>President • VP: Malan Kavoa</p>
-        </article>
-
-        <article class="card">
-          <span class="badge">Legislative</span>
-          <img src="https://i.ibb.co/RkXdTwnQ/IMG-0017.png" alt="Parliament" />
-          <h4>John Paige</h4>
-          <p>Speaker of the House • Senate &amp; House of the People</p>
-        </article>
-
-        <article class="card">
-          <span class="badge">Judicial</span>
-          <img src="https://i.ibb.co/0j3zqcCT/IMG-0009.png" alt="Judicial Building" />
-          <h4>Fatima Ahmed</h4>
-          <p>Head Justice • Supreme Court (9 Justices)</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Legacy (split layout) -->
-  <section id="legacy" class="section section-alt">
-    <div class="container legacy-grid">
-      <div class="legacy-media">
-        <!-- Swap to a portrait you like -->
-        <img src="https://images.pexels.com/photos/935949/pexels-photo-935949.jpeg" alt="Mahia Ukēro portrait" />
-      </div>
-      <div class="legacy-text">
-        <h3 class="section-title">Legacy of Mahia Ukēro</h3>
-        <p>Under Mahia Ukēro’s leadership, Zurecíá achieved unprecedented social and economic growth:</p>
-        <ul class="checklist">
-          <li>GDP growth sustained at ~7% per year</li>
-          <li>Education access with 98% literacy nationwide</li>
-          <li>Infrastructure modernization reaching 95% of the road network</li>
-          <li>Universal healthcare established and expanded</li>
-        </ul>
-        <a class="btn btn-outline" href="#news">Read related stories</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Branches (with your images) -->
-  <section id="branches" class="section">
-    <div class="container">
-      <h3 class="section-title">Government Branches</h3>
-      <div class="branch-grid">
-        <article class="branch">
-          <img src="https://i.ibb.co/9khSM6dP/IMG-0018.png" alt="Executive Building" />
-          <h4>Executive Branch</h4>
-          <p><strong>President:</strong> Ranaús Shillé &nbsp;|&nbsp; <strong>Vice President:</strong> Malan Kavoa</p>
-          <p>The official residence and working offices of the President, where national policy and ceremonial duties are led.</p>
-        </article>
-
-        <article class="branch">
-          <img src="https://i.ibb.co/RkXdTwnQ/IMG-0017.png" alt="Parliament Building" />
-          <h4>Legislative Branch</h4>
-          <p><strong>Parliament (“The House”):</strong> Senate (Upper) &amp; House of the People (Lower) • Speaker: John Paige</p>
-          <div class="house-key">
-            <img src="https://i.ibb.co/mCbWysfg/New-20-Diagram-1753493152223.png" alt="House seat layout" />
+        <aside class="hero-side" aria-label="[YOUR — AT-A-GLANCE]">
+          <div class="quick-facts">
+            <h4>[YOUR — AT A GLANCE TITLE]</h4>
             <ul>
-              <li><span class="dot dot-blue"></span> LaDfZ</li>
-              <li><span class="dot dot-red"></span> NRP</li>
-              <li><span class="dot dot-green"></span> ZPP</li>
+              <li><strong>[YOUR — FACT 1 LABEL]:</strong> [YOUR — FACT 1 VALUE]</li>
+              <li><strong>[YOUR — FACT 2 LABEL]:</strong> [YOUR — FACT 2 VALUE]</li>
+              <li><strong>[YOUR — FACT 3 LABEL]:</strong> [YOUR — FACT 3 VALUE]</li>
+              <li><strong>[YOUR — FACT 4 LABEL]:</strong> [YOUR — FACT 4 VALUE]</li>
             </ul>
           </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Top news strip -->
+    <section class="top-news wrap" aria-hidden="false">
+      <div class="news-compact">
+        <strong>[YOUR — BREAKING]</strong> [YOUR — SHORT BREAKING OR LEAD SENTENCE]
+      </div>
+    </section>
+
+    <!-- Content grid -->
+    <section class="content wrap">
+
+      <!-- Main column -->
+      <div class="col col-main">
+
+        <!-- Latest News -->
+        <section id="news" class="panel" aria-labelledby="news-title">
+          <h3 id="news-title" class="panel-title">[YOUR — LATEST NEWS HEADING]</h3>
+          <div class="news-grid">
+            <!-- repeat these articles; replace placeholders -->
+            <article class="news-item">
+              <img src="[YOUR — NEWS IMAGE 1]" alt="[YOUR — NEWS ALT 1]">
+              <div class="news-body">
+                <time datetime="[YYYY-MM-DD]">[YOUR — DATE 1]</time>
+                <h4>[YOUR — NEWS ITEM TITLE 1]</h4>
+                <p>[YOUR — NEWS ITEM BLURB 1]</p>
+                <a class="read-more" href="[YOUR — NEWS LINK 1]">[YOUR — READ MORE]</a>
+              </div>
+            </article>
+
+            <article class="news-item">
+              <img src="[YOUR — NEWS IMAGE 2]" alt="[YOUR — NEWS ALT 2]">
+              <div class="news-body">
+                <time datetime="[YYYY-MM-DD]">[YOUR — DATE 2]</time>
+                <h4>[YOUR — NEWS ITEM TITLE 2]</h4>
+                <p>[YOUR — NEWS ITEM BLURB 2]</p>
+                <a class="read-more" href="[YOUR — NEWS LINK 2]">[YOUR — READ MORE]</a>
+              </div>
+            </article>
+
+            <article class="news-item">
+              <img src="[YOUR — NEWS IMAGE 3]" alt="[YOUR — NEWS ALT 3]">
+              <div class="news-body">
+                <time datetime="[YYYY-MM-DD]">[YOUR — DATE 3]</time>
+                <h4>[YOUR — NEWS ITEM TITLE 3]</h4>
+                <p>[YOUR — NEWS ITEM BLURB 3]</p>
+                <a class="read-more" href="[YOUR — NEWS LINK 3]">[YOUR — READ MORE]</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Featured topics -->
+        <section class="panel" aria-labelledby="featured-title">
+          <h3 id="featured-title" class="panel-title">[YOUR — FEATURED HEADING]</h3>
+          <div class="featured-grid">
+            <a class="feature" href="[YOUR — FEATURE LINK 1]">
+              <h4>[YOUR — FEATURE TITLE 1]</h4>
+              <p>[YOUR — FEATURE BLURB 1]</p>
+            </a>
+            <a class="feature" href="[YOUR — FEATURE LINK 2]">
+              <h4>[YOUR — FEATURE TITLE 2]</h4>
+              <p>[YOUR — FEATURE BLURB 2]</p>
+            </a>
+            <a class="feature" href="[YOUR — FEATURE LINK 3]">
+              <h4>[YOUR — FEATURE TITLE 3]</h4>
+              <p>[YOUR — FEATURE BLURB 3]</p>
+            </a>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Side column -->
+      <aside class="col col-side">
+
+        <!-- Meet the administration -->
+        <section id="government" class="panel" aria-labelledby="gov-title">
+          <h3 id="gov-title" class="panel-title">[YOUR — MEET THE GOVERNMENT]</h3>
+          <div class="people-list">
+            <div class="person">
+              <img src="[YOUR — PERSON 1 IMG]" alt="[YOUR — PERSON 1 ALT]">
+              <div class="person-info">
+                <strong>[YOUR — PERSON 1 NAME]</strong>
+                <small>[YOUR — PERSON 1 TITLE]</small>
+              </div>
+            </div>
+
+            <div class="person">
+              <img src="[YOUR — PERSON 2 IMG]" alt="[YOUR — PERSON 2 ALT]">
+              <div class="person-info">
+                <strong>[YOUR — PERSON 2 NAME]</strong>
+                <small>[YOUR — PERSON 2 TITLE]</small>
+              </div>
+            </div>
+
+            <div class="person">
+              <img src="[YOUR — PERSON 3 IMG]" alt="[YOUR — PERSON 3 ALT]">
+              <div class="person-info">
+                <strong>[YOUR — PERSON 3 NAME]</strong>
+                <small>[YOUR — PERSON 3 TITLE]</small>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Quick links -->
+        <section class="panel quick-links" aria-labelledby="quicklinks-title">
+          <h4 id="quicklinks-title">[YOUR — QUICK LINKS]</h4>
+          <ul>
+            <li><a href="[YOUR — LINK A]">[YOUR — LINK A LABEL]</a></li>
+            <li><a href="[YOUR — LINK B]">[YOUR — LINK B LABEL]</a></li>
+            <li><a href="[YOUR — LINK C]">[YOUR — LINK C LABEL]</a></li>
+            <li><a href="[YOUR — LINK D]">[YOUR — LINK D LABEL]</a></li>
+          </ul>
+        </section>
+
+        <!-- Snapshot -->
+        <section class="panel data-snapshot" aria-labelledby="snapshot-title">
+          <h4 id="snapshot-title">[YOUR — SNAPSHOT]</h4>
+          <div class="stats">
+            <div><span class="stat-num">[YOUR — POPULATION]</span><small>[YOUR — POP LABEL]</small></div>
+            <div><span class="stat-num">[YOUR — GDP]</span><small>[YOUR — GDP LABEL]</small></div>
+            <div><span class="stat-num">[YOUR — HDI]</span><small>[YOUR — HDI LABEL]</small></div>
+          </div>
+        </section>
+
+      </aside>
+    </section>
+
+    <!-- Lower panels for branches etc. -->
+    <section class="wrap lower-panels" aria-label="[YOUR — BRANCHES]">
+      <div class="branch-panels">
+        <article class="branch">
+          <img src="[YOUR — EXEC IMAGE]" alt="[YOUR — EXEC ALT]">
+          <h4>[YOUR — EXEC TITLE]</h4>
+          <p>[YOUR — EXEC BLURB]</p>
         </article>
 
         <article class="branch">
-          <img src="https://i.ibb.co/0j3zqcCT/IMG-0009.png" alt="Judicial Building" />
-          <h4>Judicial Branch</h4>
-          <p><strong>Supreme Court:</strong> 9 Justices • <strong>Head Justice:</strong> Fatima Ahmed</p>
-          <p>Modeled on the U.S. system, safeguarding constitutional law and civil liberties.</p>
+          <img src="[YOUR — LEG IMAGE]" alt="[YOUR — LEG ALT]">
+          <h4>[YOUR — LEG TITLE]</h4>
+          <p>[YOUR — LEG BLURB]</p>
+        </article>
+
+        <article class="branch">
+          <img src="[YOUR — JUD IMAGE]" alt="[YOUR — JUD ALT]">
+          <h4>[YOUR — JUD TITLE]</h4>
+          <p>[YOUR — JUD BLURB]</p>
         </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Our People (people-centric imagery) -->
-  <section id="citizens" class="section section-alt">
-    <div class="container">
-      <h3 class="section-title">Our People</h3>
-
-      <div class="card-grid">
-        <article class="card card-photo">
-          <img src="https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg" alt="Community discussion" />
-          <h4>Public Voice</h4>
-          <p>Community consultations across provinces help shape policy and priorities.</p>
-        </article>
-
-        <article class="card card-photo">
-          <img src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg" alt="Students smiling" />
-          <h4>Education &amp; Youth</h4>
-          <p>Universal education access and modern curriculum for the next generation.</p>
-        </article>
-
-        <article class="card card-photo">
-          <img src="https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg" alt="Healthcare workers" />
-          <h4>Healthcare for All</h4>
-          <p>Universal care, equitable access, and frontline support systems.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- News -->
-  <section id="news" class="section">
-    <div class="container">
-      <h3 class="section-title">Latest News</h3>
-      <div class="news-grid">
-        <article class="news-card">
-          <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg" alt="Highway upgrade" />
-          <div class="news-body">
-            <h4>National Infrastructure Initiative</h4>
-            <p>Zurecíá launches major highway and urban transit upgrades supporting commerce and mobility.</p>
-          </div>
-        </article>
-
-        <article class="news-card">
-          <img src="https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg" alt="Classroom" />
-          <div class="news-body">
-            <h4>Education Reform Completed</h4>
-            <p>Nationwide curriculum overhaul reaches all provinces, enhancing literacy and STEM readiness.</p>
-          </div>
-        </article>
-
-        <article class="news-card">
-          <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Press conference" />
-          <div class="news-body">
-            <h4>Executive Address</h4>
-            <p>President Shillé outlines priorities on growth, opportunity, and civic unity.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <img class="brand-mark" src="https://i.ibb.co/1GkyGZHn/IMG-0072.webp" alt="Zurecíá emblem small" />
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap footer-inner">
+      <div class="foot-left">
+        <img class="seal small" src="[YOUR — LOGO URL]" alt="[YOUR — LOGO ALT]">
         <div>
-          <strong>Government of Zurecíá</strong><br />
-          © 2025. All rights reserved.
+          <strong>[YOUR — ORGANIZATION NAME]</strong><br>
+          [YOUR — SHORT FOOTER TEXT]
         </div>
       </div>
-      <nav class="footer-nav">
-        <a href="#government">Government</a>
-        <a href="#branches">Branches</a>
-        <a href="#citizens">People</a>
-        <a href="#news">News</a>
-      </nav>
+
+      <div class="foot-right">
+        <nav class="foot-nav">
+          <a href="#">[YOUR — PRIVACY]</a>
+          <a href="#">[YOUR — ACCESSIBILITY]</a>
+          <a href="#">[YOUR — CONTACT]</a>
+        </nav>
+        <div class="copyright">[YOUR — COPYRIGHT LINE]</div>
+      </div>
     </div>
   </footer>
 
+  <!-- Tiny script for mobile nav toggle -->
+  <script>
+    (function(){
+      const toggle = document.querySelector('.nav-toggle');
+      const navList = document.getElementById('nav-list');
+      if(toggle && navList){
+        toggle.addEventListener('click', ()=> {
+          const expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', !expanded);
+          navList.style.display = expanded ? '' : 'block';
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
