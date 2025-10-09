@@ -1,149 +1,210 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Zurecíá Government Portal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <!-- Google Fonts: Public Sans (body) + Great Vibes (headings) -->
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-<!-- Navigation -->
-<header>
-  <div class="nav-container">
-    <h1>Zurecíá Government</h1>
-    <nav>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#government">Meet the Government</a></li>
-        <li><a href="#legacy">Legacy</a></li>
-        <li><a href="#people">People</a></li>
-        <li><a href="#factbook">Factbook</a></li>
-        <li><a href="#news">News</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <!-- Header / Navigation -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="images/coat_of_arms.png" alt="Coat of Arms of Zurecíá" class="coat" />
+        <div class="brand-text">
+          <h1 class="site-title">Zurecíá Government</h1>
+          <p class="site-tagline">Justice · Leadership · Progress</p>
+        </div>
+      </div>
 
-<!-- Hero Section -->
-<section id="hero" class="hero">
-  <img src="images/hero.jpg" alt="Government Buildings of Zurecíá">
-  <div class="hero-text">
-    <h2>"Justice. Leadership. Progress."</h2>
-    <p>Official Portal of the Government of Zurecíá</p>
-  </div>
-</section>
-
-<!-- Meet the Government -->
-<section id="government" class="section">
-  <h2>Meet the Government</h2>
-  <div class="card-container">
-    <div class="gov-card">
-      <!-- Use your real building or official picture -->
-      <img src="images/president.jpg" alt="President Ranaús Shillé">
-      <h3>President: Ranaús Shillé</h3>
-      <p>Leads the executive branch and oversees all national policy and ceremonies.</p>
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+        <ul id="nav-list">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#government">Meet the Government</a></li>
+          <li><a href="#legacy">Legacy</a></li>
+          <li><a href="#people">People</a></li>
+          <li><a href="#factbook">Factbook</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="gov-card">
-      <!-- stock fallback for VP if you don’t have yours yet -->
-      <img src="https://images.unsplash.com/photo-1584697964154-1b2f9e8e1e2f" alt="Vice President Malan Kavoa">
-      <h3>Vice President: Malan Kavoa</h3>
-      <p>Supports the President in all official duties and succession planning.</p>
-    </div>
-    <div class="gov-card">
-      <img src="images/house_speaker.jpg" alt="House Speaker John Paige">
-      <h3>House Speaker: John Paige</h3>
-      <p>Presides over the House of the People and legislative sessions.</p>
-    </div>
-    <div class="gov-card">
-      <img src="images/supreme_court.jpg" alt="Head Justice Fatima Ahmed">
-      <h3>Head Justice: Fatima Ahmed</h3>
-      <p>Ensures the constitutionality of all laws and protects civil liberties.</p>
-    </div>
-  </div>
-</section>
+  </header>
 
-<!-- Legacy / Heroes -->
-<section id="legacy" class="section">
-  <h2>Legacy & Heroes</h2>
-  <div class="card-container">
-    <div class="hero-card">
-      <img src="https://images.unsplash.com/photo-1612835421104-7d4a2b3d2d3b" alt="Former President Mahia Ukēro">
-      <h3>Mahia Ukēro</h3>
-      <p>Former President who modernized Zurecíá, improving social programs, infrastructure, and economic stability.</p>
+  <main id="main">
+    <!-- Hero -->
+    <section id="hero" class="hero" aria-labelledby="hero-heading">
+      <img src="https://i.ibb.co/9khSM6dP/IMG-0018.png" alt="Executive Branch Building" class="hero-image">
+      <div class="hero-overlay">
+        <h2 id="hero-heading" class="hero-title">Official Portal of the Government of Zurecíá</h2>
+        <p class="hero-sub">Resources, news, and information for citizens and visitors.</p>
+        <a class="cta" href="#government">Meet the Government</a>
+      </div>
+    </section>
+
+    <!-- Government -->
+    <section id="government" class="section" aria-labelledby="gov-heading">
+      <div class="section-inner">
+        <h2 id="gov-heading">Meet the Government</h2>
+
+        <div class="card-row">
+          <article class="gov-card" aria-labelledby="pres-title">
+            <img src="images/president.jpg" alt="President Ranaús Shillé" />
+            <h3 id="pres-title">President: Ranaús Shillé</h3>
+            <p>Leads the executive branch and oversees national policy.</p>
+          </article>
+
+          <article class="gov-card" aria-labelledby="vp-title">
+            <img src="images/vp.jpg" alt="Vice President Malan Kavoa" />
+            <h3 id="vp-title">Vice President: Malan Kavoa</h3>
+            <p>Supports the President and performs ceremonial duties.</p>
+          </article>
+
+          <article class="gov-card" aria-labelledby="speaker-title">
+            <img src="https://i.ibb.co/RkXdTwnQ/IMG-0017.png" alt="Parliament Building" />
+            <h3 id="speaker-title">House Speaker: John Paige</h3>
+            <p>Presides over the House of the People.</p>
+          </article>
+
+          <article class="gov-card" aria-labelledby="justice-title">
+            <img src="https://i.ibb.co/0j3zqcCT/IMG-0009.png" alt="Supreme Court Building" />
+            <h3 id="justice-title">Head Justice: Fatima Ahmed</h3>
+            <p>Ensures the constitutionality of laws and protects civil rights.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Legacy -->
+    <section id="legacy" class="section" aria-labelledby="legacy-heading">
+      <div class="section-inner">
+        <h2 id="legacy-heading">Legacy & Heroes</h2>
+        <div class="card-row">
+          <article class="hero-card">
+            <img src="images/mahia_ukero.jpg" alt="Former President Mahia Ukēro">
+            <div class="hero-card-body">
+              <h3>Mahia Ukēro</h3>
+              <p>Former President who modernized social programs and infrastructure.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- People -->
+    <section id="people" class="section" aria-labelledby="people-heading">
+      <div class="section-inner">
+        <h2 id="people-heading">The People of Zurecíá</h2>
+
+        <div class="stats-grid" role="list">
+          <div class="stat" role="listitem">
+            <p class="stat-number">2,585,000,000</p>
+            <p class="stat-label">Population</p>
+          </div>
+          <div class="stat" role="listitem">
+            <p class="stat-number">36.4%</p>
+            <p class="stat-label">Urban Population</p>
+          </div>
+          <div class="stat" role="listitem">
+            <p class="stat-number">623/km²</p>
+            <p class="stat-label">Population Density</p>
+          </div>
+        </div>
+
+        <div class="ethnic-groups">
+          <h3>Ethnic Groups</h3>
+          <ul>
+            <li>Hweili – 63%</li>
+            <li>Olopois – 27%</li>
+            <li>Other – 10%</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Factbook -->
+    <section id="factbook" class="section" aria-labelledby="factbook-heading">
+      <div class="section-inner">
+        <h2 id="factbook-heading">Factbook</h2>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <h3>Economy</h3>
+            <p>GDP: ₰125 Trillion</p>
+            <p>Employment: ~83%</p>
+            <p>Average Income: ₰100,046</p>
+          </div>
+
+          <div class="fact-card">
+            <h3>Geography</h3>
+            <p>Land Area: 1.24 million km² | Water Area: 200,000 km²</p>
+            <p>Mountains & Foothills: 48.3% | Plains: 30.7% | Arable Land: 21%</p>
+          </div>
+
+          <div class="fact-card">
+            <h3>Symbols</h3>
+            <img src="images/flag.png" alt="Flag of Zurecíá" class="symbol-small">
+            <img src="images/coat_of_arms.png" alt="Coat of Arms of Zurecíá" class="symbol-small">
+            <p>National Anthem: "Groed van Solauha"</p>
+            <p>Motto: "Not today, satan!”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News -->
+    <section id="news" class="section" aria-labelledby="news-heading">
+      <div class="section-inner">
+        <h2 id="news-heading">Latest News</h2>
+
+        <article class="news-item">
+          <time datetime="2025-10-08">October 8, 2025</time>
+          <p>ʒenat dezkrétna nu Prezedan Shillé na daurar sa tenekra retarn, pos vëdaktem senatrek hæm sekuril brakran evarin daulhaus nu Popal.</p>
+        </article>
+
+        <article class="news-item">
+          <time datetime="2025-10-07">October 7, 2025</time>
+          <p>Trevokh nu mornan kridak ra Trakromir selnark, tan ofisrek Parlomentra heven redin u vaktren tempald.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact / Footer anchor -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="section-inner">
+        <h2 id="contact-heading">Contact</h2>
+        <p>For official inquiries, please contact the Office of the President (fictional site example).</p>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <p>© Government of Zurecíá. All rights reserved.</p>
+      <p><small>Site designed for fictional / creative use.</small></p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- People / Citizens -->
-<section id="people" class="section">
-  <h2>The People of Zurecíá</h2>
-  <div class="stats-grid">
-    <div class="stat-card">
-      <p class="stat-number">2,585,000,000</p>
-      <p class="stat-label">Population</p>
-    </div>
-    <div class="stat-card">
-      <p class="stat-number">36.4%</p>
-      <p class="stat-label">Urban Population</p>
-    </div>
-    <div class="stat-card">
-      <p class="stat-number">623/km²</p>
-      <p class="stat-label">Population Density</p>
-    </div>
-  </div>
-  <div class="ethnic-groups">
-    <h3>Ethnic Groups</h3>
-    <ul>
-      <li>Hweili – 63%</li>
-      <li>Olopois – 27%</li>
-      <li>Other – 10%</li>
-    </ul>
-  </div>
-</section>
-
-<!-- Factbook -->
-<section id="factbook" class="section">
-  <h2>Factbook</h2>
-  <div class="fact-card">
-    <h3>Economy</h3>
-    <p>GDP: ₰125 Trillion</p>
-    <p>Employment: ~83%</p>
-    <p>Income: ₰100,046</p>
-    <p>Tax Rate: 40%-70%</p>
-    <p>Currency: Denari ₰</p>
-  </div>
-  <div class="fact-card">
-    <h3>Geography</h3>
-    <p>Land Area: 1.24 million km² | Water Area: 200,000 km²</p>
-    <p>Mountains & Foothills: 48.3% | Plains: 30.7% | Arable Land: 21%</p>
-    <p>Highest Point: Mount Cusa 2,970 m | Lowest Point: Maбке Flat 47 m</p>
-  </div>
-  <div class="fact-card">
-    <h3>Symbols</h3>
-    <img src="images/flag.png" alt="Flag of Zurecíá">
-    <img src="images/coat_of_arms.png" alt="Coat of Arms of Zurecíá">
-    <p>National Anthem: "Groed van Solauha"</p>
-    <p>Motto: "Not today, satan!”</p>
-  </div>
-</section>
-
-<!-- News -->
-<section id="news" class="section">
-  <h2>Latest News</h2>
-  <div class="news-item">
-    <strong>[Date]</strong> – ʒenat dezkrétna nu Prezedan Shillé na daurar sa tenekra retarn, pos vëdaktem senatrek hæm sekuril brakran evarin daulhaus nu Popal.
-  </div>
-  <div class="news-item">
-    <strong>[Date]</strong> – Trevokh nu mornan kridak ra Trakromir selnark, tan ofisrek Parlomentra heven redin u vaktren tempald.
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <p>© Zurecíá Government. All rights reserved.</p>
-</footer>
-
+  <script>
+    // simple nav toggle for small screens
+    const btn = document.querySelector('.nav-toggle');
+    const navList = document.getElementById('nav-list');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        navList.classList.toggle('open');
+      });
+    }
+  </script>
 </body>
 </html>
