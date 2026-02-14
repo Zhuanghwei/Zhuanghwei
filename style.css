@@ -1,125 +1,52 @@
-/* ===== COLOR SYSTEM ===== */
 :root {
     --green: #0B5D3B;
     --red: #9E1B32;
-    --alert: #D62828;
     --bg: #F7F5F2;
-    --dark: #1E1E1E;
 }
 
-/* ===== GLOBAL ===== */
 body {
     margin: 0;
     font-family: Helvetica, Arial, sans-serif;
     background: var(--bg);
-    color: var(--dark);
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
     font-family: 'Merriweather', serif;
 }
 
-/* ===== ALERT BANNER ===== */
-.alert {
-    background: var(--alert);
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-/* ===== HEADER ===== */
 header {
     background: var(--green);
     color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
+    padding: 20px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* ===== HERO SECTION ===== */
 .hero {
-    padding: 90px 30px;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
-    background-color: var(--green);
+    background: var(--green);
     color: white;
+    padding: 60px 20px;
 }
 
-.hero button {
-    padding: 12px 20px;
-    border: none;
+button {
     background: var(--red);
     color: white;
+    border: none;
+    padding: 10px 15px;
     cursor: pointer;
 }
 
-.hero button:hover {
-    opacity: 0.9;
-}
-
-/* ===== SERVICES ===== */
 .services {
-    padding: 50px 30px;
-}
-
-.service-grid {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    padding: 40px 20px;
 }
 
 .card {
     background: white;
     padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    transition: 0.2s;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-}
-
-.card button {
-    background: var(--green);
-    color: white;
-    border: none;
-    padding: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-.card button:hover {
-    opacity: 0.9;
-}
-
-/* ===== NEWS ===== */
-.news {
-    background: #e9e9e9;
-    padding: 50px 30px;
-}
-
-.news-box {
-    background: white;
-    padding: 25px;
+    margin-bottom: 15px;
     border-left: 6px solid var(--red);
-    min-height: 100px;
 }
 
-/* ===== FOOTER ===== */
 footer {
     background: var(--green);
     color: white;
-    padding: 30px;
-    margin-top: 40px;
+    padding: 20px;
 }
