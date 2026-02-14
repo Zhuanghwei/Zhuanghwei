@@ -1,6 +1,6 @@
 :root {
-    --green: #0B5D3B;
-    --red: #9E1B32;
+    --red: #9E1B32;      /* Primary color */
+    --green: #0B5D3B;    /* Accent color */
     --bg: #F7F5F2;
 }
 
@@ -14,39 +14,49 @@ h1, h2, h3 {
     font-family: 'Merriweather', serif;
 }
 
+/* Header now red */
 header {
-    background: var(--green);
+    background: var(--red);
     color: white;
     padding: 20px;
 }
 
+/* Hero now red */
 .hero {
-    background: var(--green);
+    background: var(--red);
     color: white;
     padding: 60px 20px;
 }
 
+/* Accent color buttons */
 button {
-    background: var(--red);
+    background: var(--green);
     color: white;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
 }
 
+button:hover {
+    opacity: 0.9;
+}
+
+/* Service section */
 .services {
     padding: 40px 20px;
 }
 
+/* Accent stripe becomes green */
 .card {
     background: white;
     padding: 20px;
     margin-bottom: 15px;
-    border-left: 6px solid var(--red);
+    border-left: 6px solid var(--green);
 }
 
+/* Footer red */
 footer {
-    background: var(--green);
+    background: var(--red);
     color: white;
     padding: 20px;
 }
