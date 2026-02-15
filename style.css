@@ -1,62 +1,111 @@
-:root {
-    --red: #9E1B32;      /* Primary color */
-    --green: #0B5D3B;    /* Accent color */
-    --bg: #F7F5F2;
-}
-
 body {
-    margin: 0;
-    font-family: Helvetica, Arial, sans-serif;
-    background: var(--bg);
+  margin:0;
+  font-family: 'Montserrat', sans-serif;
+  color:#1E1E1E;
+  background:#F7F5F2;
 }
 
-h1, h2, h3 {
-    font-family: 'Merriweather', serif;
-}
+/* Header */
 
-/* Header now red */
 header {
-    background: var(--red);
-    color: white;
-    padding: 20px;
+  background:#9E1B32;
+  color:#CFAE70;
+  display:flex;
+  justify-content:space-between;
+  padding:16px 40px;
+  position:sticky;
+  top:0;
 }
 
-/* Hero now red */
+header nav a {
+  color:white;
+  margin-left:20px;
+  text-decoration:none;
+}
+
+header nav a:hover {
+  color:#CFAE70;
+}
+
+/* Hero */
+
 .hero {
-    background: var(--red);
-    color: white;
-    padding: 60px 20px;
+  text-align:center;
+  padding:90px 20px;
+  background:#9E1B32;
+  color:white;
 }
 
-/* Accent color buttons */
-button {
-    background: var(--green);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
+.hero h1 {
+  font-family:'Merriweather', serif;
+  font-size:42px;
 }
 
-button:hover {
-    opacity: 0.9;
+.hero-buttons button {
+  margin:10px;
+  padding:12px 22px;
+  border:none;
+  border-radius:6px;
+  background:#0B5D3B;
+  color:white;
+  cursor:pointer;
 }
 
-/* Service section */
-.services {
-    padding: 40px 20px;
+.hero-buttons .secondary {
+  background:#CFAE70;
+  color:#1E1E1E;
 }
 
-/* Accent stripe becomes green */
+/* Sections */
+
+section {
+  padding:70px 40px;
+}
+
+section:nth-child(even) {
+  background:white;
+}
+
+/* Titles */
+
+h2 {
+  font-family:'Merriweather', serif;
+  margin-bottom:30px;
+}
+
+/* Cards */
+
+.card-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+  gap:20px;
+}
+
 .card {
-    background: white;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-left: 6px solid var(--green);
+  background:white;
+  padding:25px;
+  border-radius:8px;
+  border-left:4px solid #CFAE70;
+  box-shadow:0 4px 10px rgba(0,0,0,0.06);
+  transition:0.25s;
 }
 
-/* Footer red */
+.card:hover {
+  transform:translateY(-6px);
+}
+
+/* News */
+
+.news-item {
+  padding:15px 0;
+  border-bottom:1px solid #ddd;
+}
+
+/* Footer */
+
 footer {
-    background: var(--red);
-    color: white;
-    padding: 20px;
+  background:#9E1B32;
+  color:white;
+  text-align:center;
+  padding:40px;
 }
