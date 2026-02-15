@@ -1,45 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Government Portal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Government of the UJ</title>
+<link rel="stylesheet" href="style.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Header font -->
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header>
-    <h1>National Government Portal</h1>
+  <div class="logo">Government of the UJ</div>
+  <nav>
+    <a href="#">Services</a>
+    <a href="#">Government</a>
+    <a href="#">Factbook</a>
+    <a href="#">News</a>
+    <a href="#">Contact</a>
+  </nav>
 </header>
 
 <section class="hero">
-    <h2>Welcome</h2>
-    <p>Your services start here.</p>
-    <button>Explore Services</button>
+  <h1>Serving the People of the UJ</h1>
+  <p>Access government services, updates, and public information.</p>
+  <div class="hero-buttons">
+    <button>Find Services</button>
+    <button class="secondary">Latest Updates</button>
+  </div>
 </section>
 
 <section class="services">
-    <h2>Popular Services</h2>
+  <h2>Popular Services</h2>
+  <div class="card-grid">
+    <div class="card">Passport Services</div>
+    <div class="card">Business Registration</div>
+    <div class="card">Healthcare Access</div>
+    <div class="card">Licensing Services</div>
+  </div>
+</section>
 
-    <div class="card">
-        <h3>Passport Renewal</h3>
-        <p>Renew travel documents online.</p>
-    </div>
+<section class="news">
+  <h2>News & Announcements</h2>
+  <div class="news-list">
+    <div class="news-item">Infrastructure expansion plan announced</div>
+    <div class="news-item">Education reform program update</div>
+  </div>
+</section>
 
-    <div class="card">
-        <h3>Driver License</h3>
-        <p>Apply or renew licenses.</p>
-    </div>
+<section class="government">
+  <h2>Government Structure</h2>
+  <div class="card-grid">
+    <div class="card">Executive Branch</div>
+    <div class="card">Legislature</div>
+    <div class="card">Judiciary</div>
+  </div>
+</section>
+
+<section class="factbook">
+  <h2>About the UJ</h2>
+  <div class="card-grid">
+    <div class="card">History</div>
+    <div class="card">People & Culture</div>
+    <div class="card">Regions</div>
+  </div>
 </section>
 
 <footer>
-    © Government Portal
+  Government of the United Jurisdictions • Public Service Portal
 </footer>
 
 </body>
